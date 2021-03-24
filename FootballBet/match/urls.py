@@ -3,6 +3,6 @@ from .views import *
 from rest_framework import routers
 
 urlpatterns = [
-    path('matches/',MatchView.as_view())
-
+    path('matches/',MatchView.as_view()),
+    path('match/<int:match_id>/',MatchUpdateView.as_view())
 ]
