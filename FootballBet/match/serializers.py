@@ -21,13 +21,7 @@ class MatchSerializer(serializers.ModelSerializer):
                     bet.betuser.wallet += bet.bet_amount * (coef_A / coef_B) +bet.bet_amount
                     bet.betuser.save()
 
-
-
-
-
-
-
-class MatcUpdateSerializer(serializers.Serializer):
+class MatchUpdateSerializer(serializers.Serializer):
     statuses = (
         ("haven't started", "haven't started"),
         ('going', 'going'),
