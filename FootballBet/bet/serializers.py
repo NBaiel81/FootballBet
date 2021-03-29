@@ -6,9 +6,10 @@ from betuser.models import BetUser
 class BetSerializer(serializers.ModelSerializer):
     bet_amount = serializers.IntegerField(min_value=100)
     bet_money = serializers.SerializerMethodField()
+
     class Meta:
         model = Bet
-        fields = ['betuser','bet_amount','date_created','match','result','bet_money']
+        fields = ['betuser','bet_amount','date_created','match','result','bet_money','TeamA_score','TeamB_score','bet_type']
 
     def get_bet_money(self,obj):
         bet_money = obj.bet_amount

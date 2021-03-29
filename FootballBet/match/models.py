@@ -14,3 +14,5 @@ class Match(models.Model):
     teamB=models.ForeignKey(TeamB,on_delete=models.SET_NULL,null=True)
     match_status=models.CharField(choices=statuses,max_length=20)
     result=models.CharField(choices=statuses1,max_length=20)
+    TeamA_score = models.PositiveIntegerField(default=0)
+    TeamB_score = models.PositiveIntegerField(default=0)
